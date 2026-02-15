@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System Alert</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    background:black;
+    color:red;
+    text-align:center;
+    font-family:Arial, sans-serif;
+    padding-top:30%;
+}
+h1 {
+    font-size:3em;
+}
+p {
+    font-size:1.3em;
+}
+</style>
+</head>
+<body>
+
+<h1>YOU ARE GETTING HACKED</h1>
+<p id="status">Initializing...</p>
+
+<script>
+let messages = [
+"Bypassing firewall...",
+"Accessing phone data...",
+"Stealing photos...",
+"Uploading contacts...",
+"Installing spyware...",
+
+
+let i = 0;
+setInterval(() => {
+  document.getElementById("status").innerText = messages[i];
+  i = (i + 1) % messages.length;
+}, 1000);
+</script>
+
+</body>
+</html>
